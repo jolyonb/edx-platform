@@ -834,6 +834,14 @@ class CourseFields(object):
         scope=Scope.settings,
     )
 
+    social_sharing_url = String(
+        display_name=_("Social Media Sharing URL"),
+        help=_("The URL used by the social sharing icons on the dashboard (if enabled) for posting"
+               "links on various social media websites."
+        ),
+        default=None,
+        scope=Scope.settings,
+    )
 
 class CourseDescriptor(CourseFields, SequenceDescriptor):
     module_class = SequenceModule

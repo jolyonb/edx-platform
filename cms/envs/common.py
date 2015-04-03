@@ -142,6 +142,11 @@ FEATURES = {
 
     # Enable course reruns, which will always use the split modulestore
     'ALLOW_COURSE_RERUNS': True,
+
+    # Social Media Sharing on Student Dashboard
+    'DASHBOARD_SHARE_SETTINGS': {
+        'CUSTOM_COURSE_URLS': False
+    }
 }
 
 ENABLE_JASMINE = False

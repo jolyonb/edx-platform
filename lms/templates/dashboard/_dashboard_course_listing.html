@@ -117,7 +117,11 @@ from student.helpers import (
               % endif
 
               % if share_settings:
-                <% share_url = urllib.quote_plus(request.build_absolute_uri(reverse('about_course', args=[unicode(course.id)]))) %>
+                % if share_settings.get("CUSTOM_COURSE_URLS", False) and course.social_sharing_url:
+                  <% share_url = urllib.quote_plus(course.social_sharing_url) %>
+                % else:
+                  <% share_url = urllib.quote_plus(request.build_absolute_uri(reverse('about_course', args=[unicode(course.id)]))) %>
+                % endif
                 <% share_window_name = 'shareWindow' %>
                 <% share_window_config = 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=640, height=480' %>
                 % if share_settings.get('FACEBOOK_SHARING', False):

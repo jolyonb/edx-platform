@@ -367,6 +367,7 @@ FEATURES = {
 
     # Social Media Sharing on Student Dashboard
     'DASHBOARD_SHARE_SETTINGS': {
+        'CUSTOM_COURSE_URLS': False,
         'FACEBOOK_SHARING': False,
         'TWITTER_SHARING': False,
         'TWITTER_SHARING_TEXT': None
