@@ -71,7 +71,7 @@ class CourseMetadata(object):
 
         # Do not show social sharing url field if the feature is disabled.
         if not settings.FEATURES.get('DASHBOARD_SHARE_SETTINGS') or \
-            not settings.FEATURES.get("DASHBOARD_SHARE_SETTINGS").get("CUSTOM_COURSE_URLS"):
+           not settings.FEATURES.get("DASHBOARD_SHARE_SETTINGS").get("CUSTOM_COURSE_URLS"):
             filtered_list.append('social_sharing_url')
 
         return filtered_list
